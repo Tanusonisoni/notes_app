@@ -216,11 +216,13 @@ function Navbar() {
     { name: "OOP", icon: Code, color: "text-purple-400" },
   ];
   const components=[
-   {name:DBMS,component:<Dbms/>}
+  {
+    name:"DBMS",
+    component:<Dbms/>
+  }
   ]
-  const [active, setActive] = useState(components[0]);
+  const [active, setActive] = useState();
 
-  
    return (
     <>
       {/* MAIN CONTAINER */}
@@ -249,15 +251,14 @@ function Navbar() {
               return (
                 <button
                   key={i}
-                  onClick={() => setActive(sub.name)
-}
+                  onClick={() => setActive(sub.component)}
                   className={`flex items-center gap-2 px-5 py-2 rounded-xl text-sm font-semibold transition-all duration-300 whitespace-nowrap
 
                   ${
                     active === sub.name
                       ? "bg-white text-black shadow-lg"
                       : "text-gray-400 hover:bg-[#1c1c1c]"
-                  }
+                   }
                   `}
                 >
                   <Icon
@@ -273,6 +274,7 @@ function Navbar() {
                 </button>
               );
             })}
+            
           </div>
 
           {/* RIGHT */}
