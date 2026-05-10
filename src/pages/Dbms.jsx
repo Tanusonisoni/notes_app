@@ -4,6 +4,7 @@ import note from "../notes.js";
 function Dbms() {
 
   const [selectedPdf, setSelectedPdf] = useState("");
+  const [checked,setChecked]=useState(false);
 
   const topics = [
     "Introduction",
@@ -34,11 +35,12 @@ function Dbms() {
                        bg-gray-100 text-gray-700 
                        text-xs rounded-md"
           >
-            <input type="checkbox" className="w-3 h-3" />
+            <input type="checkbox"
+            onChange={()=>setChecked(!topic)}
+            className="w-3 h-3" />
             <span>{topic}</span>
           </div>
         ))}
-
       </div>
 
       {/* Notes Section */}
@@ -48,7 +50,7 @@ function Dbms() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-        {note.map((data, idx) => (
+        {note.Dbms.map((data, idx) => (
           <div
             className="border rounded-xl p-4 shadow"
             key={idx}
