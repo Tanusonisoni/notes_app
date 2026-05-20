@@ -1,12 +1,12 @@
 import React from "react";
 import Quiz1 from "../pages/Quiz1";
-import { useNavigation } from "react-router";
-
+import { useNavigate } from "react-router";
 
 
 function Quiz() {
 
-  const naviagte=useNavigation();
+  const navigates=useNavigate();
+  
   return (
     <div className="min-h-screen bg-black flex items-center justify-center">
       
@@ -24,20 +24,30 @@ function Quiz() {
           
           <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition duration-300"
           onClick={()=>(
-            naviagte(<Quiz1/>)
+            navigates("/quiz1")
           )}>
             DBMS
           </button>
+          {/* <NavLink to="</Quiz1">DBMS</NavLink> */}
 
-          <button className="bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition duration-300">
+          <button className="bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition duration-300"
+           onClick={()=>(
+            navigates("/quiz2")
+          )}>
             CN
           </button>
 
-          <button className="bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition duration-300">
+          <button className="bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition duration-300"
+           onClick={()=>(
+            navigates("/quiz3")
+          )}>
             OOPS
           </button>
 
-          <button className="bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-semibold transition duration-300">
+          <button className="bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-semibold transition duration-300"
+           onClick={()=>(
+            navigates("/quiz3")
+          )}>
             OS
           </button>
 

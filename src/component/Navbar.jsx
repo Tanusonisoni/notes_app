@@ -52,7 +52,7 @@ function Navbar() {
                   className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition
 
                   ${active === sub.name
-                      ? "bg-white text-black"
+                      ? " "
                       : "text-gray-400 hover:bg-[#1c1c1c]"
                     }`}
                 >
@@ -64,7 +64,7 @@ function Navbar() {
 
             {/* QUIZ BUTTON */}
             <button
-              onClick={() => navigate("/quiz")}
+              onClick={() => navigate("/Quiz")}
               className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-yellow-400 hover:bg-[#1c1c1c] transition"
             >
               <HelpCircle size={16} />

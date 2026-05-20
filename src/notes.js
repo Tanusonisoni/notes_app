@@ -1,42 +1,56 @@
-const note ={
-    Dbms:[
+const note = {
+  Dbms: [
     {
-        title:"DBMS introduction",
-        pdf:'/public/notes/dbms/intro-to-dbms.pdf'
-    },
-
-    {
-        title:"Normalization",
-        pdf:'/public/notes/dbms/DBMS-Normalization.pdf'
+      title: "DBMS introduction",
+      pdf: '/notes/dbms/intro-to-dbms.pdf'
     },
     {
-          title:"Transaction",
-        pdf:'/public/notes/dbms/DBMS-Transactions.pdf'
+      title: "Normalization",
+      pdf: '/notes/dbms/normalization.pdf'
     },
-     {
-          title:"Indexing",
-        pdf:'/public/notes/dbms/DBMS-Indexing.pdf'
+    {
+      title: "Transaction",
+      pdf: '/notes/dbms/DBMS-Transactions.pdf'
+    },
+    {
+      title: "Indexing",
+      pdf: '/notes/dbms/DBMS-Indexing.pdf'
     }
-],
+  ],
 
-os:[
-  {
-    title:"intro",
-    pdf:'/public/notes/OS/first.pdf'
-  },
-   {
-    title:"Process & Threads,CPU Scheduling,Synchronization",
-    pdf:'/public/notes/OS/second.pdf'
-  },
-   {
-    title:"Paging & Segmentation,Virtual Memory,File System",
-    pdf:'/public/notes/OS/third.pdf'
-  },
-   {
-    title:"Disk Scheduling",
-    pdf:'/public/notes/OS/fourth.pdf'
-  }
-]
+  os: [
+    {
+      title: "intro",
+      pdf: '/notes/OS/first.pdf'
+    },
+    {
+      title: "Process & Threads,CPU Scheduling,Synchronization",
+      pdf: '/notes/OS/second.pdf'
+    },
+    {
+      title: "Paging & Segmentation,Virtual Memory,File System",
+      pdf: '/notes/OS/third.pdf'
+    },
+    {
+      title: "Disk Scheduling",
+      pdf: '/notes/OS/fourth.pdf'
+    }
+  ],
+
+  cn: [
+    {
+      title: "intro",
+      pdf: '/notes/CN/one.pdf'
+    },
+    {
+      title: "intro",
+      pdf: '/notes/CN/two.pdf'
+    },
+    {
+      title: "intro",
+      pdf: '/notes/CN/three.pdf'
+    }
+  ]
 };
 
 export default note;
