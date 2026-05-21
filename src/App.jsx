@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './component/Navbar'
 import Dbms from './pages/Dbms'
@@ -9,13 +9,20 @@ import Quiz1 from './pages/Quiz1'
 import PlayQuiz from './component/PlayQuiz'
 
 function Oop() {
+
+    const [level, setLevel] = useState("");
+
+    
   return (
+
+    
     <div className="min-h-screen bg-black text-white px-5 md:px-10 py-6">
       <h1 className="text-4xl font-black text-purple-400">OOP Notes</h1>
       <p className="text-gray-400 mt-4">Coming soon: object-oriented programming notes and practice.</p>
     </div>
   )
 }
+
 
 function App() {
   return (
