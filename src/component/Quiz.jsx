@@ -1,6 +1,6 @@
 import React from "react";
 import Quiz1 from "../pages/Quiz1";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 
 function Quiz() {
