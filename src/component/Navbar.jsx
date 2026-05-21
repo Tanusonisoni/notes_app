@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Database, Cpu, Network, Code, User, HelpCircle } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 function Navbar() {
   const subjects = [
