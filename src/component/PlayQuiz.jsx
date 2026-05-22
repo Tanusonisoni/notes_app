@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Context from '../context/context';
 import data from '../quiz';
 
@@ -18,7 +18,9 @@ function PlayQuiz() {
 
   //timer
   const [timeLimit, setTimeLimit] = useState(null);
-const [timeLeft, setTimeLeft] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(0);
+
+  const [time, setTime] = useState(0);
 
   const selectCategory = data.categories.find(
     (item) => item.level === level
@@ -33,6 +35,28 @@ const [timeLeft, setTimeLeft] = useState(0);
   }
 
   const que = selectedCard.questions[currentQue];
+
+  const handleTimeChange = (e) => {
+    const minutes = Number(e.target.value);
+    setTime(minutes); // yahi pe timer start ho jayega
+  };
+
+  useEffect(() => {
+    if (time <= 0) return;
+
+    const interval = setInterval(() => {
+      setTime((prev) => {
+        if (prev === 1) {
+          clearInterval(interval);
+          alert("Time up");
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [time]);
 
   // ✅ submit logic updated
   const handleSubmit = () => {
@@ -88,9 +112,8 @@ const [timeLeft, setTimeLeft] = useState(0);
             return (
               <div
                 key={idx}
-                className={`p-4 rounded-lg ${
-                  isCorrect ? "bg-green-700" : "bg-red-700"
-                }`}
+                className={`p-4 rounded-lg ${isCorrect ? "bg-green-700" : "bg-red-700"
+                  }`}
               >
                 <p className="font-semibold">
                   Q{idx + 1}. {item.question}
@@ -116,84 +139,83 @@ const [timeLeft, setTimeLeft] = useState(0);
   // ✅ NORMAL QUIZ UI
 
   return (
-  <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 flex items-center justify-center">
 
-    {/* CENTER CARD */}
-    <div className="w-full max-w-2xl bg-slate-900/80 backdrop-blur-md border border-slate-700 rounded-2xl shadow-2xl p-8">
+      {/* CENTER CARD */}
+      <div className="w-full max-w-2xl bg-slate-900/80 backdrop-blur-md border border-slate-700 rounded-2xl shadow-2xl p-8">
 
-      {/* Header */}
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-xl font-bold text-cyan-400">
-          {selectedCard.title}
-        </h1>
+        {/* Header */}
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-xl font-bold text-cyan-400">
+            {selectedCard.title}
+          </h1>
 
-        {/* Timer Box (placeholder) */}
-        <div className="bg-slate-800 border border-cyan-500 px-4 py-3 rounded-xl shadow flex flex-col gap-2">
+          {/* Timer Box (placeholder) */}
+          <div className="bg-slate-800 border border-cyan-500 px-4 py-3 rounded-xl shadow flex flex-col gap-2">
 
-  <p className="text-xs text-slate-400">Select Time</p>
+            <p className="text-xs text-slate-400">Select Time</p>
 
-  {/* ✅ Dropdown */}
-  <select
-    value={timeLimit || ""}
-    onChange={(e) => setTimeLimit(Number(e.target.value))}
-    className="bg-slate-900 text-white text-sm px-2 py-1 rounded outline-none border border-slate-600"
-  >
-    <option value="" disabled>Select</option>
-    <option value="10">10 sec</option>
-    <option value="20">20 sec</option>
-    <option value="30">30 sec</option>
-  </select>
+            {/* ✅ Dropdown */}
+            <select
+              value={timeLimit || ""}
+              onChange={handleTimeChange }
+              className="bg-slate-900 text-white text-sm px-2 py-1 rounded outline-none border border-slate-600"
+            >
+              <option value="" disabled>Select</option>
+              <option value="10">10 sec</option>
+              <option value="20">20 sec</option>
+              <option value="30">30 sec</option>
+            </select>
 
-  {/* ✅ Timer Display */}
-  <h2 className={`text-lg font-bold ${
-    timeLeft <= 5 ? "text-red-500 animate-pulse" : "text-cyan-400"
-  }`}>
-    ⏱️ {timeLeft}s
-  </h2>
+            {/* ✅ Timer Display */}
+            <h2>
+              {Math.floor(time / 60)}:{time % 60 < 10 ? "0" : ""}
+              {time % 60}
+            </h2>
 
-</div>
-        
+          </div>
+
+        </div>
+
+        {/* Question */}
+        <h2 className="text-lg font-semibold mb-5 text-white">
+          Q{currentQue + 1}. {que.question}
+        </h2>
+
+        {/* Options */}
+        <div className="space-y-3">
+          {que.options.map((op, i) => (
+            <label
+              key={i}
+              className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer transition
+    ${selectedOption === op
+                  ? "bg-cyan-600 text-white"
+                  : "bg-slate-800 hover:bg-slate-700 text-slate-100"}`}
+            >
+              <input
+                type="radio"
+                name="option"
+                value={op}
+                checked={selectedOption === op}
+                onChange={(e) => setSelectedOption(e.target.value)}
+                className="accent-cyan-500"
+              />
+              <span>{op}</span>
+            </label>
+          ))}
+        </div>
+
+        {/* Button */}
+        <button
+          onClick={handleSubmit}
+          className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-blue-500 py-3 rounded-xl font-semibold hover:scale-105 transition"
+        >
+          Submit
+        </button>
+
       </div>
-
-      {/* Question */}
-      <h2 className="text-lg font-semibold mb-5 text-white">
-        Q{currentQue + 1}. {que.question}
-      </h2>
-
-      {/* Options */}
-      <div className="space-y-3">
-        {que.options.map((op, i) => (
-  <label
-    key={i}
-    className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer transition
-    ${selectedOption === op 
-      ? "bg-cyan-600 text-white" 
-      : "bg-slate-800 hover:bg-slate-700 text-slate-100"}`}
-  >
-    <input
-      type="radio"
-      name="option"
-      value={op}
-      checked={selectedOption === op}
-      onChange={(e) => setSelectedOption(e.target.value)}
-      className="accent-cyan-500"
-    />
-    <span>{op}</span>
-  </label>
-))}
-      </div>
-
-      {/* Button */}
-      <button
-        onClick={handleSubmit}
-        className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-blue-500 py-3 rounded-xl font-semibold hover:scale-105 transition"
-      >
-        Submit
-      </button>
-
     </div>
-  </div>
-);
+  );
 }
 
 export default PlayQuiz;
