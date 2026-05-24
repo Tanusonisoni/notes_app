@@ -275,4 +275,292 @@ const data = {
   ]
 };
 
+const CnData = {
+  categories: [
+    // 🟢 EASY
+    {
+      level: "Easy",
+      cards: [
+        {
+          cardId: 1,
+          title: "Basics of CN",
+          questions: [
+            { question: "Computer Network is?", options: ["Connected computers","Single system","Software","None"], answer: "Connected computers" },
+            { question: "Internet is?", options: ["Network of networks","Single network","LAN","None"], answer: "Network of networks" },
+            { question: "Protocol means?", options: ["Rules","Device","Cable","None"], answer: "Rules" },
+            { question: "Data is sent in form of?", options: ["Packets","Files","Programs","None"], answer: "Packets" },
+            { question: "Full form of LAN?", options: ["Local Area Network","Large Area Network","Long Area Network","None"], answer: "Local Area Network" },
+            { question: "Full form of WAN?", options: ["Wide Area Network","Wireless Area Network","World Area Network","None"], answer: "Wide Area Network" },
+            { question: "Topology means?", options: ["Structure","Speed","Protocol","None"], answer: "Structure" },
+            { question: "Network device?", options: ["Router","Mouse","Keyboard","None"], answer: "Router" },
+            { question: "Bandwidth means?", options: ["Data capacity","Speed","Signal","None"], answer: "Data capacity" },
+            { question: "IP stands for?", options: ["Internet Protocol","Internal Protocol","Input Protocol","None"], answer: "Internet Protocol" }
+          ]
+        },
+
+        {
+          cardId: 2,
+          title: "OSI Model",
+          questions: [
+            { question: "OSI has layers?", options: ["7","5","3","10"], answer: "7" },
+            { question: "Top layer?", options: ["Application","Network","Data link","None"], answer: "Application" },
+            { question: "Bottom layer?", options: ["Physical","Session","Transport","None"], answer: "Physical" },
+            { question: "Transport layer does?", options: ["End to end","Routing","Framing","None"], answer: "End to end" },
+            { question: "Network layer does?", options: ["Routing","Error","Flow","None"], answer: "Routing" },
+            { question: "Data link layer?", options: ["Framing","Routing","Encryption","None"], answer: "Framing" },
+            { question: "Physical layer?", options: ["Transmission","Routing","None","None"], answer: "Transmission" },
+            { question: "Session layer?", options: ["Connection control","Routing","None","None"], answer: "Connection control" },
+            { question: "Presentation layer?", options: ["Formatting","Routing","None","None"], answer: "Formatting" },
+            { question: "Application layer?", options: ["User interface","Routing","None","None"], answer: "User interface" }
+          ]
+        },
+
+        {
+          cardId: 3,
+          title: "TCP/IP Model",
+          questions: [
+            { question: "TCP/IP layers?", options: ["4","7","5","3"], answer: "4" },
+            { question: "Top layer?", options: ["Application","Transport","Network","None"], answer: "Application" },
+            { question: "Transport protocol?", options: ["TCP","IP","HTTP","None"], answer: "TCP" },
+            { question: "IP is in?", options: ["Internet layer","Transport","None","None"], answer: "Internet layer" },
+            { question: "HTTP is?", options: ["Application protocol","Transport","None","None"], answer: "Application protocol" },
+            { question: "FTP used for?", options: ["File transfer","Email","Chat","None"], answer: "File transfer" },
+            { question: "SMTP used for?", options: ["Email","File","Chat","None"], answer: "Email" },
+            { question: "DNS used for?", options: ["Name to IP","IP to name","None","None"], answer: "Name to IP" },
+            { question: "UDP is?", options: ["Connectionless","Connection","None","None"], answer: "Connectionless" },
+            { question: "TCP is?", options: ["Connection oriented","Connectionless","None","None"], answer: "Connection oriented" }
+          ]
+        }
+      ]
+    },
+
+    // 🟡 MEDIUM
+    {
+      level: "Medium",
+      cards: [
+        {
+          cardId: 1,
+          title: "IP Addressing",
+          questions: [
+            { question: "IPv4 size?", options: ["32 bit","64 bit","128 bit","None"], answer: "32 bit" },
+            { question: "IPv6 size?", options: ["128 bit","32 bit","64 bit","None"], answer: "128 bit" },
+            { question: "Class A range?", options: ["1-126","128-191","192-223","None"], answer: "1-126" },
+            { question: "Class B range?", options: ["128-191","1-126","192-223","None"], answer: "128-191" },
+            { question: "Class C range?", options: ["192-223","128-191","1-126","None"], answer: "192-223" },
+            { question: "Loopback address?", options: ["127.0.0.1","192.168.1.1","None","None"], answer: "127.0.0.1" },
+            { question: "Private IP?", options: ["192.168.x.x","8.8.8.8","None","None"], answer: "192.168.x.x" },
+            { question: "Subnet mask?", options: ["Network/host split","IP","None","None"], answer: "Network/host split" },
+            { question: "Broadcast address?", options: ["All hosts","Single","None","None"], answer: "All hosts" },
+            { question: "IP used for?", options: ["Identification","Speed","None","None"], answer: "Identification" }
+          ]
+        },
+
+        {
+          cardId: 2,
+          title: "Routing & Switching",
+          questions: [
+            { question: "Router works on?", options: ["Network layer","Physical","None","None"], answer: "Network layer" },
+            { question: "Switch works on?", options: ["Data link","Network","None","None"], answer: "Data link" },
+            { question: "Routing means?", options: ["Path selection","Speed","None","None"], answer: "Path selection" },
+            { question: "Static routing?", options: ["Manual","Auto","None","None"], answer: "Manual" },
+            { question: "Dynamic routing?", options: ["Automatic","Manual","None","None"], answer: "Automatic" },
+            { question: "MAC address?", options: ["Physical address","IP","None","None"], answer: "Physical address" },
+            { question: "ARP?", options: ["IP to MAC","MAC to IP","None","None"], answer: "IP to MAC" },
+            { question: "RARP?", options: ["MAC to IP","IP to MAC","None","None"], answer: "MAC to IP" },
+            { question: "Switch avoids?", options: ["Collision","Broadcast","None","None"], answer: "Collision" },
+            { question: "Router avoids?", options: ["Broadcast","Collision","None","None"], answer: "Broadcast" }
+          ]
+        }
+      ]
+    },
+
+    // 🔴 HARD
+    {
+      level: "Hard",
+      cards: [
+        {
+          cardId: 1,
+          title: "Advanced Protocols",
+          questions: [
+            { question: "HTTP works on port?", options: ["80","21","25","None"], answer: "80" },
+            { question: "HTTPS port?", options: ["443","80","21","None"], answer: "443" },
+            { question: "FTP port?", options: ["21","80","25","None"], answer: "21" },
+            { question: "SMTP port?", options: ["25","21","80","None"], answer: "25" },
+            { question: "DNS port?", options: ["53","80","21","None"], answer: "53" },
+            { question: "TCP provides?", options: ["Reliability","Speed","None","None"], answer: "Reliability" },
+            { question: "UDP provides?", options: ["Fast","Reliable","None","None"], answer: "Fast" },
+            { question: "Congestion control?", options: ["Traffic control","Speed","None","None"], answer: "Traffic control" },
+            { question: "Flow control?", options: ["Sender control","Routing","None","None"], answer: "Sender control" },
+            { question: "Checksum?", options: ["Error detection","Routing","None","None"], answer: "Error detection" }
+          ]
+        }
+      ]
+    }
+  ]
+};
+const osData = {
+  categories: [
+    // 🟢 EASY
+    {
+      level: "Easy",
+      cards: [
+        {
+          cardId: 1,
+          title: "OS Basics",
+          questions: [
+            { question: "Operating System is?", options: ["Interface between user and hardware","Application","Compiler","None"], answer: "Interface between user and hardware" },
+            { question: "Example of OS?", options: ["Windows","MS Word","Chrome","None"], answer: "Windows" },
+            { question: "Kernel is?", options: ["Core of OS","Application","Program","None"], answer: "Core of OS" },
+            { question: "OS manages?", options: ["Resources","Files","Processes","All"], answer: "All" },
+            { question: "Process is?", options: ["Program in execution","File","Thread","None"], answer: "Program in execution" },
+            { question: "Thread is?", options: ["Lightweight process","Heavy process","Program","None"], answer: "Lightweight process" },
+            { question: "CPU scheduling?", options: ["Process selection","Memory","File","None"], answer: "Process selection" },
+            { question: "Time sharing?", options: ["Multiple users","Single user","None","None"], answer: "Multiple users" },
+            { question: "Multiprogramming?", options: ["Multiple programs","Single","None","None"], answer: "Multiple programs" },
+            { question: "System call?", options: ["OS service","User input","None","None"], answer: "OS service" }
+          ]
+        },
+
+        {
+          cardId: 2,
+          title: "Memory Management",
+          questions: [
+            { question: "RAM is?", options: ["Volatile","Non-volatile","None","None"], answer: "Volatile" },
+            { question: "ROM is?", options: ["Non-volatile","Volatile","None","None"], answer: "Non-volatile" },
+            { question: "Paging?", options: ["Memory division","CPU","None","None"], answer: "Memory division" },
+            { question: "Fragmentation?", options: ["Memory waste","CPU","None","None"], answer: "Memory waste" },
+            { question: "Virtual memory?", options: ["Extra memory","RAM","None","None"], answer: "Extra memory" },
+            { question: "Page fault?", options: ["Missing page","Error","None","None"], answer: "Missing page" },
+            { question: "Segmentation?", options: ["Logical division","Physical","None","None"], answer: "Logical division" },
+            { question: "Cache memory?", options: ["Fast memory","Slow","None","None"], answer: "Fast memory" },
+            { question: "Thrashing?", options: ["Excess paging","CPU","None","None"], answer: "Excess paging" },
+            { question: "Memory allocation?", options: ["Assign memory","Delete","None","None"], answer: "Assign memory" }
+          ]
+        }
+      ]
+    },
+
+    // 🟡 MEDIUM
+    {
+      level: "Medium",
+      cards: [
+        {
+          cardId: 1,
+          title: "CPU Scheduling",
+          questions: [
+            { question: "FCFS?", options: ["First Come First Serve","Priority","None","None"], answer: "First Come First Serve" },
+            { question: "SJF?", options: ["Shortest Job First","Longest","None","None"], answer: "Shortest Job First" },
+            { question: "Round Robin?", options: ["Time slice","Priority","None","None"], answer: "Time slice" },
+            { question: "Priority scheduling?", options: ["Priority based","Time","None","None"], answer: "Priority based" },
+            { question: "Turnaround time?", options: ["Completion time","Start","None","None"], answer: "Completion time" },
+            { question: "Waiting time?", options: ["Wait duration","CPU","None","None"], answer: "Wait duration" },
+            { question: "Response time?", options: ["First response","End","None","None"], answer: "First response" },
+            { question: "Preemptive?", options: ["Interrupt","No interrupt","None","None"], answer: "Interrupt" },
+            { question: "Non-preemptive?", options: ["No interrupt","Interrupt","None","None"], answer: "No interrupt" },
+            { question: "Throughput?", options: ["Processes completed","Time","None","None"], answer: "Processes completed" }
+          ]
+        }
+      ]
+    },
+
+    // 🔴 HARD
+    {
+      level: "Hard",
+      cards: [
+        {
+          cardId: 1,
+          title: "Deadlock & Synchronization",
+          questions: [
+            { question: "Deadlock?", options: ["Circular wait","Speed","None","None"], answer: "Circular wait" },
+            { question: "Mutex?", options: ["Lock","Unlock","None","None"], answer: "Lock" },
+            { question: "Semaphore?", options: ["Signal","Lock","None","None"], answer: "Signal" },
+            { question: "Critical section?", options: ["Shared code","Private","None","None"], answer: "Shared code" },
+            { question: "Race condition?", options: ["Conflict","Safe","None","None"], answer: "Conflict" },
+            { question: "Starvation?", options: ["Indefinite wait","Execution","None","None"], answer: "Indefinite wait" },
+            { question: "Banker's algorithm?", options: ["Deadlock avoidance","Detection","None","None"], answer: "Deadlock avoidance" },
+            { question: "Deadlock prevention?", options: ["Avoid condition","Allow","None","None"], answer: "Avoid condition" },
+            { question: "Deadlock detection?", options: ["Find deadlock","Ignore","None","None"], answer: "Find deadlock" },
+            { question: "Recovery?", options: ["Resolve deadlock","Ignore","None","None"], answer: "Resolve deadlock" }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+const oopsData = {
+  categories: [
+    // 🟢 EASY
+    {
+      level: "Easy",
+      cards: [
+        {
+          cardId: 1,
+          title: "OOP Basics",
+          questions: [
+            { question: "OOP stands for?", options: ["Object Oriented Programming","Only Object Program","None","None"], answer: "Object Oriented Programming" },
+            { question: "Class is?", options: ["Blueprint","Object","Function","None"], answer: "Blueprint" },
+            { question: "Object is?", options: ["Instance of class","Blueprint","None","None"], answer: "Instance of class" },
+            { question: "Encapsulation?", options: ["Data hiding","Inheritance","None","None"], answer: "Data hiding" },
+            { question: "Inheritance?", options: ["Reuse","Hide","None","None"], answer: "Reuse" },
+            { question: "Polymorphism?", options: ["Many forms","Single","None","None"], answer: "Many forms" },
+            { question: "Abstraction?", options: ["Hide details","Show","None","None"], answer: "Hide details" },
+            { question: "Constructor?", options: ["Initialize object","Delete","None","None"], answer: "Initialize object" },
+            { question: "Destructor?", options: ["Destroy object","Create","None","None"], answer: "Destroy object" },
+            { question: "Method?", options: ["Function in class","Variable","None","None"], answer: "Function in class" }
+          ]
+        }
+      ]
+    },
+
+    // 🟡 MEDIUM
+    {
+      level: "Medium",
+      cards: [
+        {
+          cardId: 1,
+          title: "OOP Concepts",
+          questions: [
+            { question: "Overloading?", options: ["Same name diff params","Override","None","None"], answer: "Same name diff params" },
+            { question: "Overriding?", options: ["Same function child","Parent","None","None"], answer: "Same function child" },
+            { question: "Access specifier?", options: ["public/private","Loop","None","None"], answer: "public/private" },
+            { question: "Friend function?", options: ["Access private","No access","None","None"], answer: "Access private" },
+            { question: "Static keyword?", options: ["Shared","Private","None","None"], answer: "Shared" },
+            { question: "This pointer?", options: ["Current object","Other","None","None"], answer: "Current object" },
+            { question: "Virtual function?", options: ["Runtime polymorphism","Compile","None","None"], answer: "Runtime polymorphism" },
+            { question: "Pure virtual?", options: ["Abstract class","Concrete","None","None"], answer: "Abstract class" },
+            { question: "Interface?", options: ["Only declaration","Implementation","None","None"], answer: "Only declaration" },
+            { question: "Dynamic binding?", options: ["Runtime","Compile","None","None"], answer: "Runtime" }
+          ]
+        }
+      ]
+    },
+
+    // 🔴 HARD
+    {
+      level: "Hard",
+      cards: [
+        {
+          cardId: 1,
+          title: "Advanced OOP",
+          questions: [
+            { question: "Multiple inheritance?", options: ["Multiple parents","Single","None","None"], answer: "Multiple parents" },
+            { question: "Diamond problem?", options: ["Ambiguity","Clear","None","None"], answer: "Ambiguity" },
+            { question: "Virtual inheritance?", options: ["Solve diamond","Create","None","None"], answer: "Solve diamond" },
+            { question: "Deep copy?", options: ["Copy values","Reference","None","None"], answer: "Copy values" },
+            { question: "Shallow copy?", options: ["Copy reference","Value","None","None"], answer: "Copy reference" },
+            { question: "Operator overloading?", options: ["Custom operator","Default","None","None"], answer: "Custom operator" },
+            { question: "Polymorphism types?", options: ["Compile & Runtime","Single","None","None"], answer: "Compile & Runtime" },
+            { question: "Binding types?", options: ["Static & Dynamic","Single","None","None"], answer: "Static & Dynamic" },
+            { question: "Abstraction achieved by?", options: ["Abstract class","Variable","None","None"], answer: "Abstract class" },
+            { question: "Encapsulation ensures?", options: ["Security","Speed","None","None"], answer: "Security" }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+
 export default data;
+export { CnData, osData, oopsData };

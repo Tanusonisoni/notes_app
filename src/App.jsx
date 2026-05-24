@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Routes, Route, Navigate } from 'react-router'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './component/Navbar'
 import Dbms from './pages/Dbms'
 import Os from './pages/Os'
@@ -7,6 +7,10 @@ import Cn from './pages/Cn'
 import Quiz from './component/Quiz'
 import Quiz1 from './pages/Quiz1'
 import PlayQuiz from './component/PlayQuiz'
+import Quiz2 from './pages/Quiz2'
+import Quiz3 from './pages/Quiz3'
+import Quiz4 from './pages/Quiz4'
+import Quiz5 from './pages/Quiz5'
 
 function Oop() {
 
@@ -36,6 +40,10 @@ function App() {
 
         <Route path="/Quiz" element={<Quiz />}/>
         <Route path="/quiz1" element={<Quiz1/>} />
+        <Route path="/quiz2" element={<Quiz2/>} />
+        <Route path="/quiz3" element={<Quiz3/>} />
+        <Route path="/quiz4" element={<Quiz4/>} />
+        <Route path="/quiz5" element={<Quiz5/>} />
         <Route path="/quizplay" element={<PlayQuiz />} />
 
 

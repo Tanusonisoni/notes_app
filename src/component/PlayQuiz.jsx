@@ -38,7 +38,7 @@ function PlayQuiz() {
 
   const handleTimeChange = (e) => {
     const minutes = Number(e.target.value);
-    setTime(minutes); // yahi pe timer start ho jayega
+    setTime(minutes*60); // yahi pe timer start ho jayega
   };
 
   useEffect(() => {
@@ -162,9 +162,9 @@ function PlayQuiz() {
               className="bg-slate-900 text-white text-sm px-2 py-1 rounded outline-none border border-slate-600"
             >
               <option value="" disabled>Select</option>
-              <option value="10">10 sec</option>
-              <option value="20">20 sec</option>
-              <option value="30">30 sec</option>
+              <option value="10">10 min</option>
+              <option value="20">20 min</option>
+              <option value="30">30 min</option>
             </select>
 
             {/* ✅ Timer Display */}

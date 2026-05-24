@@ -1,7 +1,5 @@
 import React from "react";
-import Quiz1 from "../pages/Quiz1";
-import { useNavigate } from "react-router";
-
+import { useNavigate } from "react-router-dom";
 
 function Quiz() {
 
@@ -39,7 +37,7 @@ function Quiz() {
 
           <button className="bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition duration-300"
            onClick={()=>(
-            navigates("/quiz3")
+            navigates("/quiz5")
           )}>
             OOPS
           </button>
@@ -49,6 +47,13 @@ function Quiz() {
             navigates("/quiz3")
           )}>
             OS
+          </button>
+
+          <button className="bg-green-700 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition duration-300"
+           onClick={()=>(
+            navigates("/quiz4")
+          )}>
+            Aptitude
           </button>
 
         </div>
