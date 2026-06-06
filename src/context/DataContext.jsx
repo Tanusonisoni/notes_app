@@ -6,10 +6,11 @@ function DataContext({children}) {
 
     const [id,setId]=useState("");
     const [level,setLevel]=useState("")
+    const [topic ,setTopic]=useState("");
     
   return (
     <div>
-      <Context.Provider value={{id,setId,level,setLevel}}>
+      <Context.Provider value={{id,setId,level,setLevel,topic ,setTopic}}>
         {children}
       </Context.Provider>
     </div>

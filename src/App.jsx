@@ -11,6 +11,7 @@ import Quiz2 from './pages/Quiz2'
 import Quiz3 from './pages/Quiz3'
 import Quiz4 from './pages/Quiz4'
 import Quiz5 from './pages/Quiz5'
+import AptiQuiz from './component/aptiQuiz'
 
 function Oop() {
 
@@ -45,6 +46,8 @@ function App() {
         <Route path="/quiz4" element={<Quiz4/>} />
         <Route path="/quiz5" element={<Quiz5/>} />
         <Route path="/quizplay" element={<PlayQuiz />} />
+        <Route path="/aptitudeQuiz" element={<AptiQuiz/>} />
+
 
 
         {/* <Route path="*" element={<Navigate to="/" replace /> */}

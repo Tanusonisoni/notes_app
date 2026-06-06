@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { osData } from '../quiz';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import Context from '../context/context';
 
 function Quiz3() {

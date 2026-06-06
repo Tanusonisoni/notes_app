@@ -71,3 +71,4 @@ const aptitudeMockData = [
   },
 
 ];
+export default aptitudeMockData

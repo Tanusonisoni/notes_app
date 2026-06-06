@@ -1,7 +1,17 @@
-import React from 'react'
-import aptitudeMockData from '../aptitude'
+import React, { useContext } from 'react'
+// import aptitudeMockData from '../aptitdedata'
+import aptitudeMockData from "../aptitude.js"
+import Context from '../context/context.jsx';
+import { useNavigate } from 'react-router';
 
 function Quiz4() {
+  const {topic ,setTopic}=useContext(Context);
+
+  const navigate=useNavigate()
+  
+
+  // console.log(topic);
+
   return (
     <div className="min-h-screen bg-slate-900 p-6">
       
@@ -28,6 +38,8 @@ function Quiz4() {
               {item.subtopics?.map((to, idx) => (
                 <li 
                   key={idx}
+                  onClick={()=>setTopic({category:item.topic,topic:to},navigate("/aptitudeQuiz"))
+                  }
                   className="bg-slate-700 text-slate-200 px-3 py-1 rounded-lg text-sm hover:bg-cyan-600 hover:text-white transition"
                 >
                   {to}

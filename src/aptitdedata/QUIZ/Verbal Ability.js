@@ -976,558 +976,558 @@ export const fillup=[
       "answer": "on"
     }
   ]
-export const paraJumble=[
-    {
-      "id": 1,
-      "sentences": {
-        "A": "As a result, productivity improved significantly.",
-        "B": "The company introduced flexible working hours.",
-        "C": "Employees reported higher job satisfaction.",
-        "D": "This policy was welcomed by the workforce."
-      },
-      "options": ["BDCA", "BCDA", "BDAC", "BACD"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 2,
-      "sentences": {
-        "A": "Consequently, sales increased dramatically.",
-        "B": "The firm launched an aggressive marketing campaign.",
-        "C": "Customer awareness improved substantially.",
-        "D": "The campaign targeted digital platforms."
-      },
-      "options": ["BDCA", "BCDA", "BADC", "BACD"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 3,
-      "sentences": {
-        "A": "This enabled researchers to gather accurate data.",
-        "B": "A new analytical tool was developed.",
-        "C": "The findings helped improve decision-making.",
-        "D": "It was tested extensively before deployment."
-      },
-      "options": ["BDAC", "BDAC", "BADC", "BACD"],
-      "answer": "BDAC"
-    },
-    {
-      "id": 4,
-      "sentences": {
-        "A": "As a result, operational costs decreased.",
-        "B": "The organization automated several manual processes.",
-        "C": "Efficiency improved across departments.",
-        "D": "Employees received training on the new systems."
-      },
-      "options": ["BDCA", "BDAC", "BACD", "BCDA"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 5,
-      "sentences": {
-        "A": "The initiative received positive feedback.",
-        "B": "Management introduced a mentorship program.",
-        "C": "New employees adapted more quickly.",
-        "D": "Experienced staff guided newcomers."
-      },
-      "options": ["BDCA", "BCDA", "BDAC", "BACD"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 6,
-      "sentences": {
-        "A": "This reduced waiting times significantly.",
-        "B": "The hospital implemented an online appointment system.",
-        "C": "Patients found the process more convenient.",
-        "D": "The platform allowed advance scheduling."
-      },
-      "options": ["BDAC", "BADC", "BCDA", "BACD"],
-      "answer": "BDAC"
-    },
-    {
-      "id": 7,
-      "sentences": {
-        "A": "Consequently, customer retention improved.",
-        "B": "The company enhanced its support services.",
-        "C": "Response times became much faster.",
-        "D": "Additional staff were hired."
-      },
-      "options": ["BDCA", "BCDA", "BADC", "BACD"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 8,
-      "sentences": {
-        "A": "The innovation attracted global attention.",
-        "B": "Engineers developed a cost-effective solution.",
-        "C": "It addressed a long-standing industry challenge.",
-        "D": "Experts praised its practicality."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 9,
-      "sentences": {
-        "A": "This encouraged employees to upskill.",
-        "B": "The organization launched an e-learning portal.",
-        "C": "Thousands enrolled in online courses.",
-        "D": "Various certification programs were offered."
-      },
-      "options": ["BDAC", "BCDA", "BADC", "BACD"],
-      "answer": "BDAC"
-    },
-    {
-      "id": 10,
-      "sentences": {
-        "A": "As a result, project completion rates increased.",
-        "B": "Managers adopted agile methodologies.",
-        "C": "Teams collaborated more effectively.",
-        "D": "Workflows became more transparent."
-      },
-      "options": ["BDCA", "BCDA", "BADC", "BACD"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 11,
-      "sentences": {
-        "A": "The investment generated substantial returns.",
-        "B": "The startup expanded into international markets.",
-        "C": "Its customer base grew rapidly.",
-        "D": "Demand increased across regions."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 12,
-      "sentences": {
-        "A": "The changes were implemented gradually.",
-        "B": "The company revised its policies.",
-        "C": "Employees adapted without difficulty.",
-        "D": "Training sessions were conducted."
-      },
-      "options": ["BDAC", "BCDA", "BACD", "BADC"],
-      "answer": "BDAC"
-    },
-    {
-      "id": 13,
-      "sentences": {
-        "A": "This improved transparency considerably.",
-        "B": "The government digitized public services.",
-        "C": "Citizens gained easier access.",
-        "D": "Many processes became paperless."
-      },
-      "options": ["BDAC", "BCDA", "BACD", "BADC"],
-      "answer": "BDAC"
-    },
-    {
-      "id": 14,
-      "sentences": {
-        "A": "Consequently, employee morale improved.",
-        "B": "The company introduced wellness programs.",
-        "C": "Participation rates increased steadily.",
-        "D": "Staff appreciated the initiative."
-      },
-      "options": ["BDCA", "BCDA", "BACD", "BADC"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 15,
-      "sentences": {
-        "A": "The strategy proved highly effective.",
-        "B": "The retailer analyzed consumer behavior.",
-        "C": "Marketing campaigns were personalized.",
-        "D": "Sales figures improved significantly."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 16,
-      "sentences": {
-        "A": "This increased operational efficiency.",
-        "B": "The factory adopted automation technology.",
-        "C": "Production speed improved.",
-        "D": "Manual intervention decreased."
-      },
-      "options": ["BDCA", "BCDA", "BACD", "BADC"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 17,
-      "sentences": {
-        "A": "The program achieved remarkable success.",
-        "B": "The university introduced scholarships.",
-        "C": "Student enrollment increased.",
-        "D": "Many deserving candidates benefited."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 18,
-      "sentences": {
-        "A": "Consequently, profits improved.",
-        "B": "The company reduced unnecessary expenses.",
-        "C": "Resources were allocated efficiently.",
-        "D": "Management monitored spending closely."
-      },
-      "options": ["BDCA", "BCDA", "BACD", "BADC"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 19,
-      "sentences": {
-        "A": "This enhanced user experience.",
-        "B": "Developers redesigned the application.",
-        "C": "Navigation became more intuitive.",
-        "D": "Customer feedback was incorporated."
-      },
-      "options": ["BDAC", "BCDA", "BACD", "BADC"],
-      "answer": "BDAC"
-    },
-    {
-      "id": 20,
-      "sentences": {
-        "A": "As a result, environmental impact reduced.",
-        "B": "The organization adopted sustainable practices.",
-        "C": "Energy consumption declined.",
-        "D": "Waste management improved."
-      },
-      "options": ["BDCA", "BCDA", "BACD", "BADC"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 21,
-      "sentences": {
-        "A": "This strengthened customer trust.",
-        "B": "The bank upgraded its security systems.",
-        "C": "Fraud incidents decreased.",
-        "D": "Transactions became safer."
-      },
-      "options": ["BDCA", "BCDA", "BACD", "BADC"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 22,
-      "sentences": {
-        "A": "Consequently, brand visibility increased.",
-        "B": "The company collaborated with influencers.",
-        "C": "Social media engagement grew.",
-        "D": "The campaign reached wider audiences."
-      },
-      "options": ["BDCA", "BCDA", "BACD", "BADC"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 23,
-      "sentences": {
-        "A": "The initiative received widespread support.",
-        "B": "The city launched a cleanliness drive.",
-        "C": "Residents participated actively.",
-        "D": "Awareness campaigns were conducted."
-      },
-      "options": ["BDCA", "BCDA", "BACD", "BADC"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 24,
-      "sentences": {
-        "A": "This boosted employee confidence.",
-        "B": "The company invested in training.",
-        "C": "Skill levels improved significantly.",
-        "D": "Work quality increased."
-      },
-      "options": ["BDCA", "BCDA", "BACD", "BADC"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 25,
-      "sentences": {
-        "A": "The solution gained industry recognition.",
-        "B": "Researchers developed a new algorithm.",
-        "C": "Its performance exceeded expectations.",
-        "D": "Experts acknowledged its effectiveness."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 26,
-      "sentences": {
-        "A": "As a result, customer satisfaction improved.",
-        "B": "The company upgraded its support infrastructure.",
-        "C": "Response times decreased significantly.",
-        "D": "New service channels were introduced."
-      },
-      "options": ["BDCA", "BCDA", "BADC", "BACD"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 27,
-      "sentences": {
-        "A": "This improved accessibility for users.",
-        "B": "Developers redesigned the website.",
-        "C": "Navigation became more intuitive.",
-        "D": "Several outdated features were removed."
-      },
-      "options": ["BDCA", "BCDA", "BDAC", "BACD"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 28,
-      "sentences": {
-        "A": "Consequently, employee engagement increased.",
-        "B": "Management introduced recognition programs.",
-        "C": "Outstanding performers were rewarded.",
-        "D": "The initiative motivated staff members."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 29,
-      "sentences": {
-        "A": "The technology gained widespread acceptance.",
-        "B": "Researchers developed a cost-efficient model.",
-        "C": "Organizations adopted it rapidly.",
-        "D": "Its benefits became evident quickly."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 30,
-      "sentences": {
-        "A": "This resulted in better coordination.",
-        "B": "Teams started using collaborative tools.",
-        "C": "Communication became more efficient.",
-        "D": "Project updates were shared instantly."
-      },
-      "options": ["BDCA", "BCDA", "BACD", "BADC"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 31,
-      "sentences": {
-        "A": "The initiative reduced operational delays.",
-        "B": "The organization streamlined workflows.",
-        "C": "Processes became more efficient.",
-        "D": "Resources were utilized effectively."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 32,
-      "sentences": {
-        "A": "As a result, attendance improved.",
-        "B": "The school introduced digital classrooms.",
-        "C": "Students found learning more engaging.",
-        "D": "Interactive tools were incorporated."
-      },
-      "options": ["BDCA", "BCDA", "BACD", "BADC"],
-      "answer": "BDCA"
-    },
-    {
-      "id": 33,
-      "sentences": {
-        "A": "The policy was appreciated by stakeholders.",
-        "B": "The government implemented tax reforms.",
-        "C": "Business compliance became easier.",
-        "D": "Administrative burdens decreased."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 34,
-      "sentences": {
-        "A": "This led to increased efficiency.",
-        "B": "The factory adopted robotic automation.",
-        "C": "Production errors were reduced.",
-        "D": "Output levels increased steadily."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 35,
-      "sentences": {
-        "A": "Consequently, costs were minimized.",
-        "B": "The company optimized resource allocation.",
-        "C": "Waste was reduced significantly.",
-        "D": "Operations became more sustainable."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 36,
-      "sentences": {
-        "A": "The strategy improved market penetration.",
-        "B": "The firm expanded into emerging markets.",
-        "C": "Demand for products increased.",
-        "D": "Revenue growth accelerated."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 37,
-      "sentences": {
-        "A": "This enhanced workplace safety.",
-        "B": "The company conducted safety training sessions.",
-        "C": "Employees became more aware of risks.",
-        "D": "Accidents declined considerably."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 38,
-      "sentences": {
-        "A": "As a result, public participation increased.",
-        "B": "The city launched an awareness campaign.",
-        "C": "Citizens became more informed.",
-        "D": "Community programs gained popularity."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 39,
-      "sentences": {
-        "A": "The project received international recognition.",
-        "B": "Engineers developed an innovative solution.",
-        "C": "The design solved a critical problem.",
-        "D": "Experts praised its effectiveness."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 40,
-      "sentences": {
-        "A": "Consequently, brand loyalty improved.",
-        "B": "The company enhanced customer engagement.",
-        "C": "Personalized experiences were offered.",
-        "D": "Consumers responded positively."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 41,
-      "sentences": {
-        "A": "This increased transparency.",
-        "B": "The organization adopted digital record-keeping.",
-        "C": "Information became easier to access.",
-        "D": "Decision-making improved."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 42,
-      "sentences": {
-        "A": "The initiative improved employee retention.",
-        "B": "Management introduced career development programs.",
-        "C": "Staff gained new opportunities.",
-        "D": "Job satisfaction increased."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 43,
-      "sentences": {
-        "A": "As a result, productivity rose significantly.",
-        "B": "The company modernized its infrastructure.",
-        "C": "System reliability improved.",
-        "D": "Downtime was reduced."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 44,
-      "sentences": {
-        "A": "The campaign generated positive outcomes.",
-        "B": "The organization promoted environmental awareness.",
-        "C": "People adopted sustainable practices.",
-        "D": "Community participation increased."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 45,
-      "sentences": {
-        "A": "Consequently, user satisfaction improved.",
-        "B": "The software underwent major updates.",
-        "C": "Performance issues were resolved.",
-        "D": "The interface became more user-friendly."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 46,
-      "sentences": {
-        "A": "The initiative strengthened community ties.",
-        "B": "Local organizations collaborated on projects.",
-        "C": "Resources were shared efficiently.",
-        "D": "Collective outcomes improved."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 47,
-      "sentences": {
-        "A": "This increased organizational effectiveness.",
-        "B": "Managers adopted data-driven decision making.",
-        "C": "Insights became more accurate.",
-        "D": "Strategic planning improved."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 48,
-      "sentences": {
-        "A": "As a result, research output increased.",
-        "B": "The institution invested in modern laboratories.",
-        "C": "Researchers gained better facilities.",
-        "D": "Innovation was encouraged."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 49,
-      "sentences": {
-        "A": "The effort improved service quality.",
-        "B": "The company conducted employee training.",
-        "C": "Skills were enhanced considerably.",
-        "D": "Customers noticed the difference."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    },
-    {
-      "id": 50,
-      "sentences": {
-        "A": "Consequently, organizational performance improved.",
-        "B": "Leadership introduced strategic reforms.",
-        "C": "Processes became more streamlined.",
-        "D": "Resources were managed efficiently."
-      },
-      "options": ["BCDA", "BDCA", "BACD", "BADC"],
-      "answer": "BCDA"
-    }
-  ];
+// export const paraJumble=[
+//     {
+//       "id": 1,
+//       "sentences": {
+//         "A": "As a result, productivity improved significantly.",
+//         "B": "The company introduced flexible working hours.",
+//         "C": "Employees reported higher job satisfaction.",
+//         "D": "This policy was welcomed by the workforce."
+//       },
+//       "options": ["BDCA", "BCDA", "BDAC", "BACD"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 2,
+//       "sentences": {
+//         "A": "Consequently, sales increased dramatically.",
+//         "B": "The firm launched an aggressive marketing campaign.",
+//         "C": "Customer awareness improved substantially.",
+//         "D": "The campaign targeted digital platforms."
+//       },
+//       "options": ["BDCA", "BCDA", "BADC", "BACD"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 3,
+//       "sentences": {
+//         "A": "This enabled researchers to gather accurate data.",
+//         "B": "A new analytical tool was developed.",
+//         "C": "The findings helped improve decision-making.",
+//         "D": "It was tested extensively before deployment."
+//       },
+//       "options": ["BDAC", "BDAC", "BADC", "BACD"],
+//       "answer": "BDAC"
+//     },
+//     {
+//       "id": 4,
+//       "sentences": {
+//         "A": "As a result, operational costs decreased.",
+//         "B": "The organization automated several manual processes.",
+//         "C": "Efficiency improved across departments.",
+//         "D": "Employees received training on the new systems."
+//       },
+//       "options": ["BDCA", "BDAC", "BACD", "BCDA"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 5,
+//       "sentences": {
+//         "A": "The initiative received positive feedback.",
+//         "B": "Management introduced a mentorship program.",
+//         "C": "New employees adapted more quickly.",
+//         "D": "Experienced staff guided newcomers."
+//       },
+//       "options": ["BDCA", "BCDA", "BDAC", "BACD"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 6,
+//       "sentences": {
+//         "A": "This reduced waiting times significantly.",
+//         "B": "The hospital implemented an online appointment system.",
+//         "C": "Patients found the process more convenient.",
+//         "D": "The platform allowed advance scheduling."
+//       },
+//       "options": ["BDAC", "BADC", "BCDA", "BACD"],
+//       "answer": "BDAC"
+//     },
+//     {
+//       "id": 7,
+//       "sentences": {
+//         "A": "Consequently, customer retention improved.",
+//         "B": "The company enhanced its support services.",
+//         "C": "Response times became much faster.",
+//         "D": "Additional staff were hired."
+//       },
+//       "options": ["BDCA", "BCDA", "BADC", "BACD"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 8,
+//       "sentences": {
+//         "A": "The innovation attracted global attention.",
+//         "B": "Engineers developed a cost-effective solution.",
+//         "C": "It addressed a long-standing industry challenge.",
+//         "D": "Experts praised its practicality."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 9,
+//       "sentences": {
+//         "A": "This encouraged employees to upskill.",
+//         "B": "The organization launched an e-learning portal.",
+//         "C": "Thousands enrolled in online courses.",
+//         "D": "Various certification programs were offered."
+//       },
+//       "options": ["BDAC", "BCDA", "BADC", "BACD"],
+//       "answer": "BDAC"
+//     },
+//     {
+//       "id": 10,
+//       "sentences": {
+//         "A": "As a result, project completion rates increased.",
+//         "B": "Managers adopted agile methodologies.",
+//         "C": "Teams collaborated more effectively.",
+//         "D": "Workflows became more transparent."
+//       },
+//       "options": ["BDCA", "BCDA", "BADC", "BACD"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 11,
+//       "sentences": {
+//         "A": "The investment generated substantial returns.",
+//         "B": "The startup expanded into international markets.",
+//         "C": "Its customer base grew rapidly.",
+//         "D": "Demand increased across regions."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 12,
+//       "sentences": {
+//         "A": "The changes were implemented gradually.",
+//         "B": "The company revised its policies.",
+//         "C": "Employees adapted without difficulty.",
+//         "D": "Training sessions were conducted."
+//       },
+//       "options": ["BDAC", "BCDA", "BACD", "BADC"],
+//       "answer": "BDAC"
+//     },
+//     {
+//       "id": 13,
+//       "sentences": {
+//         "A": "This improved transparency considerably.",
+//         "B": "The government digitized public services.",
+//         "C": "Citizens gained easier access.",
+//         "D": "Many processes became paperless."
+//       },
+//       "options": ["BDAC", "BCDA", "BACD", "BADC"],
+//       "answer": "BDAC"
+//     },
+//     {
+//       "id": 14,
+//       "sentences": {
+//         "A": "Consequently, employee morale improved.",
+//         "B": "The company introduced wellness programs.",
+//         "C": "Participation rates increased steadily.",
+//         "D": "Staff appreciated the initiative."
+//       },
+//       "options": ["BDCA", "BCDA", "BACD", "BADC"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 15,
+//       "sentences": {
+//         "A": "The strategy proved highly effective.",
+//         "B": "The retailer analyzed consumer behavior.",
+//         "C": "Marketing campaigns were personalized.",
+//         "D": "Sales figures improved significantly."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 16,
+//       "sentences": {
+//         "A": "This increased operational efficiency.",
+//         "B": "The factory adopted automation technology.",
+//         "C": "Production speed improved.",
+//         "D": "Manual intervention decreased."
+//       },
+//       "options": ["BDCA", "BCDA", "BACD", "BADC"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 17,
+//       "sentences": {
+//         "A": "The program achieved remarkable success.",
+//         "B": "The university introduced scholarships.",
+//         "C": "Student enrollment increased.",
+//         "D": "Many deserving candidates benefited."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 18,
+//       "sentences": {
+//         "A": "Consequently, profits improved.",
+//         "B": "The company reduced unnecessary expenses.",
+//         "C": "Resources were allocated efficiently.",
+//         "D": "Management monitored spending closely."
+//       },
+//       "options": ["BDCA", "BCDA", "BACD", "BADC"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 19,
+//       "sentences": {
+//         "A": "This enhanced user experience.",
+//         "B": "Developers redesigned the application.",
+//         "C": "Navigation became more intuitive.",
+//         "D": "Customer feedback was incorporated."
+//       },
+//       "options": ["BDAC", "BCDA", "BACD", "BADC"],
+//       "answer": "BDAC"
+//     },
+//     {
+//       "id": 20,
+//       "sentences": {
+//         "A": "As a result, environmental impact reduced.",
+//         "B": "The organization adopted sustainable practices.",
+//         "C": "Energy consumption declined.",
+//         "D": "Waste management improved."
+//       },
+//       "options": ["BDCA", "BCDA", "BACD", "BADC"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 21,
+//       "sentences": {
+//         "A": "This strengthened customer trust.",
+//         "B": "The bank upgraded its security systems.",
+//         "C": "Fraud incidents decreased.",
+//         "D": "Transactions became safer."
+//       },
+//       "options": ["BDCA", "BCDA", "BACD", "BADC"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 22,
+//       "sentences": {
+//         "A": "Consequently, brand visibility increased.",
+//         "B": "The company collaborated with influencers.",
+//         "C": "Social media engagement grew.",
+//         "D": "The campaign reached wider audiences."
+//       },
+//       "options": ["BDCA", "BCDA", "BACD", "BADC"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 23,
+//       "sentences": {
+//         "A": "The initiative received widespread support.",
+//         "B": "The city launched a cleanliness drive.",
+//         "C": "Residents participated actively.",
+//         "D": "Awareness campaigns were conducted."
+//       },
+//       "options": ["BDCA", "BCDA", "BACD", "BADC"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 24,
+//       "sentences": {
+//         "A": "This boosted employee confidence.",
+//         "B": "The company invested in training.",
+//         "C": "Skill levels improved significantly.",
+//         "D": "Work quality increased."
+//       },
+//       "options": ["BDCA", "BCDA", "BACD", "BADC"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 25,
+//       "sentences": {
+//         "A": "The solution gained industry recognition.",
+//         "B": "Researchers developed a new algorithm.",
+//         "C": "Its performance exceeded expectations.",
+//         "D": "Experts acknowledged its effectiveness."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 26,
+//       "sentences": {
+//         "A": "As a result, customer satisfaction improved.",
+//         "B": "The company upgraded its support infrastructure.",
+//         "C": "Response times decreased significantly.",
+//         "D": "New service channels were introduced."
+//       },
+//       "options": ["BDCA", "BCDA", "BADC", "BACD"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 27,
+//       "sentences": {
+//         "A": "This improved accessibility for users.",
+//         "B": "Developers redesigned the website.",
+//         "C": "Navigation became more intuitive.",
+//         "D": "Several outdated features were removed."
+//       },
+//       "options": ["BDCA", "BCDA", "BDAC", "BACD"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 28,
+//       "sentences": {
+//         "A": "Consequently, employee engagement increased.",
+//         "B": "Management introduced recognition programs.",
+//         "C": "Outstanding performers were rewarded.",
+//         "D": "The initiative motivated staff members."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 29,
+//       "sentences": {
+//         "A": "The technology gained widespread acceptance.",
+//         "B": "Researchers developed a cost-efficient model.",
+//         "C": "Organizations adopted it rapidly.",
+//         "D": "Its benefits became evident quickly."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 30,
+//       "sentences": {
+//         "A": "This resulted in better coordination.",
+//         "B": "Teams started using collaborative tools.",
+//         "C": "Communication became more efficient.",
+//         "D": "Project updates were shared instantly."
+//       },
+//       "options": ["BDCA", "BCDA", "BACD", "BADC"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 31,
+//       "sentences": {
+//         "A": "The initiative reduced operational delays.",
+//         "B": "The organization streamlined workflows.",
+//         "C": "Processes became more efficient.",
+//         "D": "Resources were utilized effectively."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 32,
+//       "sentences": {
+//         "A": "As a result, attendance improved.",
+//         "B": "The school introduced digital classrooms.",
+//         "C": "Students found learning more engaging.",
+//         "D": "Interactive tools were incorporated."
+//       },
+//       "options": ["BDCA", "BCDA", "BACD", "BADC"],
+//       "answer": "BDCA"
+//     },
+//     {
+//       "id": 33,
+//       "sentences": {
+//         "A": "The policy was appreciated by stakeholders.",
+//         "B": "The government implemented tax reforms.",
+//         "C": "Business compliance became easier.",
+//         "D": "Administrative burdens decreased."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 34,
+//       "sentences": {
+//         "A": "This led to increased efficiency.",
+//         "B": "The factory adopted robotic automation.",
+//         "C": "Production errors were reduced.",
+//         "D": "Output levels increased steadily."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 35,
+//       "sentences": {
+//         "A": "Consequently, costs were minimized.",
+//         "B": "The company optimized resource allocation.",
+//         "C": "Waste was reduced significantly.",
+//         "D": "Operations became more sustainable."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 36,
+//       "sentences": {
+//         "A": "The strategy improved market penetration.",
+//         "B": "The firm expanded into emerging markets.",
+//         "C": "Demand for products increased.",
+//         "D": "Revenue growth accelerated."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 37,
+//       "sentences": {
+//         "A": "This enhanced workplace safety.",
+//         "B": "The company conducted safety training sessions.",
+//         "C": "Employees became more aware of risks.",
+//         "D": "Accidents declined considerably."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 38,
+//       "sentences": {
+//         "A": "As a result, public participation increased.",
+//         "B": "The city launched an awareness campaign.",
+//         "C": "Citizens became more informed.",
+//         "D": "Community programs gained popularity."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 39,
+//       "sentences": {
+//         "A": "The project received international recognition.",
+//         "B": "Engineers developed an innovative solution.",
+//         "C": "The design solved a critical problem.",
+//         "D": "Experts praised its effectiveness."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 40,
+//       "sentences": {
+//         "A": "Consequently, brand loyalty improved.",
+//         "B": "The company enhanced customer engagement.",
+//         "C": "Personalized experiences were offered.",
+//         "D": "Consumers responded positively."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 41,
+//       "sentences": {
+//         "A": "This increased transparency.",
+//         "B": "The organization adopted digital record-keeping.",
+//         "C": "Information became easier to access.",
+//         "D": "Decision-making improved."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 42,
+//       "sentences": {
+//         "A": "The initiative improved employee retention.",
+//         "B": "Management introduced career development programs.",
+//         "C": "Staff gained new opportunities.",
+//         "D": "Job satisfaction increased."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 43,
+//       "sentences": {
+//         "A": "As a result, productivity rose significantly.",
+//         "B": "The company modernized its infrastructure.",
+//         "C": "System reliability improved.",
+//         "D": "Downtime was reduced."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 44,
+//       "sentences": {
+//         "A": "The campaign generated positive outcomes.",
+//         "B": "The organization promoted environmental awareness.",
+//         "C": "People adopted sustainable practices.",
+//         "D": "Community participation increased."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 45,
+//       "sentences": {
+//         "A": "Consequently, user satisfaction improved.",
+//         "B": "The software underwent major updates.",
+//         "C": "Performance issues were resolved.",
+//         "D": "The interface became more user-friendly."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 46,
+//       "sentences": {
+//         "A": "The initiative strengthened community ties.",
+//         "B": "Local organizations collaborated on projects.",
+//         "C": "Resources were shared efficiently.",
+//         "D": "Collective outcomes improved."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 47,
+//       "sentences": {
+//         "A": "This increased organizational effectiveness.",
+//         "B": "Managers adopted data-driven decision making.",
+//         "C": "Insights became more accurate.",
+//         "D": "Strategic planning improved."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 48,
+//       "sentences": {
+//         "A": "As a result, research output increased.",
+//         "B": "The institution invested in modern laboratories.",
+//         "C": "Researchers gained better facilities.",
+//         "D": "Innovation was encouraged."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 49,
+//       "sentences": {
+//         "A": "The effort improved service quality.",
+//         "B": "The company conducted employee training.",
+//         "C": "Skills were enhanced considerably.",
+//         "D": "Customers noticed the difference."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     },
+//     {
+//       "id": 50,
+//       "sentences": {
+//         "A": "Consequently, organizational performance improved.",
+//         "B": "Leadership introduced strategic reforms.",
+//         "C": "Processes became more streamlined.",
+//         "D": "Resources were managed efficiently."
+//       },
+//       "options": ["BCDA", "BDCA", "BACD", "BADC"],
+//       "answer": "BCDA"
+//     }
+//   ];
 
 export const paraJumble={
   "topic": "Sentence Completion",
