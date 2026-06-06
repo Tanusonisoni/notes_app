@@ -311,7 +311,7 @@ const CnData = {
             { question: "Physical layer?", options: ["Transmission","Routing","None","None"], answer: "Transmission" },
             { question: "Session layer?", options: ["Connection control","Routing","None","None"], answer: "Connection control" },
             { question: "Presentation layer?", options: ["Formatting","Routing","None","None"], answer: "Formatting" },
-            { question: "Application layer?", options: ["User interface","Routing","None","None"], answer: "User interface" }
+            { question  : "Application layer?", options: ["User interface","Routing","None","None"], answer: "User interface" }
           ]
         },
 
