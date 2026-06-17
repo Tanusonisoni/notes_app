@@ -12,7 +12,7 @@ function Navbar() {
 
   let navigate = useNavigate();
 
-   
+
   const [active, setActive] = useState("DBMS");
 
 
@@ -22,65 +22,71 @@ function Navbar() {
       <div className="min-h-screen bg-black text-white px-5 md:px-10 py-6">
 
         {/* NAVBAR (FIXED) */}
-        <nav className="fixed top-0 left-0 w-full z-50 
-        flex flex-col md:flex-row md:items-center md:justify-between gap-5 
-        px-5 md:px-10 py-4 bg-black/80 backdrop-blur-xl border-b border-gray-800">
+       <nav
+  className="
+    fixed top-0 left-0 right-0 z-50
+    min-h-[60px]
+    flex flex-col md:flex-row
+    items-start md:items-center
+    justify-between
+    gap-2 md:gap-0
+    px-5 md:px-10 py-1
+    bg-black/80 backdrop-blur-xl
+    border-b border-gray-800
+    overflow-hidden
+  "
+>
+  {/* LEFT */}
+  <div className="flex flex-col items-start leading-none">
+    <h1 className="text-3xl font-extrabold tracking-wide m-0 p-0">
+      Revise
+    </h1>
 
-          {/* LEFT */}
-          <div>
-            <h1 className="text-3xl font-extrabold tracking-wide">
-              Revise
-            </h1>
-            <p className="text-gray-500 text-sm mt-1">
-              Study smarter for placements
-            </p>
-          </div>
+    <p className="text-gray-500 text-sm m-0 p-0 mt-1">
+      Study smarter for placements
+    </p>
+  </div>
 
-          {/* CENTER NAV */}
-          <div className="flex items-center gap-2 bg-[#111111] border border-gray-800 rounded-2xl p-2 overflow-x-auto">
+  {/* CENTER NAV */}
+  <div className="flex items-center gap-2 bg-[#111111] border border-gray-800 rounded-2xl p-2 overflow-x-auto max-w-full">
+    {subjects.map((sub, i) => {
+      const Icon = sub.icon;
 
-            {subjects.map((sub, i) => {
-              const Icon = sub.icon;
+      return (
+        <button
+          key={i}
+          onClick={() => {
+            setActive(sub.name);
+            navigate(sub.path);
+          }}
+          className={`
+            flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition flex-shrink-0
+            ${
+              active === sub.name
+                ? "bg-[#1c1c1c] text-white"
+                : "text-gray-400 hover:bg-[#1c1c1c]"
+            }
+          `}
+        >
+          <Icon size={16} />
+          {sub.name}
+        </button>
+      );
+    })}
 
-              return (
-                <button
-                  key={i}
-                  onClick={() => {
-                    setActive(sub.name);
-                    navigate(sub.path);
-                  }}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition
-
-                  ${active === sub.name
-                      ? " "
-                      : "text-gray-400 hover:bg-[#1c1c1c]"
-                    }`}
-                >
-                  <Icon size={16} />
-                  {sub.name}
-                </button>
-              );
-            })}
-
-            {/* QUIZ BUTTON */}
-            <button
-              onClick={() => navigate("/Quiz")}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-yellow-400 hover:bg-[#1c1c1c] transition"
-            >
-              <HelpCircle size={16} />
-              Quiz
-            </button>
-
-          </div>
-
-          {/* RIGHT */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#111111] border border-gray-700 flex items-center justify-center">
-              <User size={18} className="text-gray-300" />
-            </div>
-          </div>
-
-        </nav>
+    {/* QUIZ BUTTON */}
+    <button
+      onClick={() => navigate("/Quiz")}
+      className="
+        flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold
+        text-yellow-400 hover:bg-[#1c1c1c] transition flex-shrink-0
+      "
+    >
+      <HelpCircle size={16} />
+      Quiz
+    </button>
+  </div>
+</nav>
 
         {/* HERO (added spacing for fixed navbar) */}
         <div className="text-center mt-28 mb-14">
