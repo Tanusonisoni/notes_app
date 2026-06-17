@@ -1,4 +1,4 @@
-export const mockTest1={
+export const MockTest3={
   "questions": [
     {
       "id": 1,
@@ -287,3 +287,4 @@ export const mockTest1={
     }
   ]
 }
+export default MockTest3;

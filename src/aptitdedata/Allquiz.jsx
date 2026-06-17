@@ -7,9 +7,7 @@ import verbal from './QUIZ/Verbal Ability'
     
 
 function Allquiz() {
-
-    
-      const QUIZ={
+ const QUIZ={
         "Advanced Quant":advancequ,
         "Logical Reasoning":logoical,
         "Quantitative Aptitude":quantap,

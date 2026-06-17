@@ -1,23 +1,8 @@
-import React, { useContext } from 'react'
-import Context from '../context/context'
-import quiz from '../aptitdedata/Allquiz'
-
+import React from 'react';
+import AptiQuizLoader from './AptiQuizLoader';
 
 function AptiQuiz() {
-
- const {topic}=useContext(Context);
-
- const selectedQuiz=quiz[topic];
- console.log(selectedQuiz)
-    
-  return (
-    <div>
-      <h1>helo apti quiz</h1>
-      <h1>Category: {topic?.category}</h1>
-      <h2>Topic: {topic?.topic}</h2>
-    
-    </div>
-  )
+  return <AptiQuizLoader />;
 }
 
-export default AptiQuiz
+export default AptiQuiz;

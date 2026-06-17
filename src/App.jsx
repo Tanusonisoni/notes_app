@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router'
 import Navbar from './component/Navbar'
 import Dbms from './pages/Dbms'
 import Os from './pages/Os'
@@ -11,8 +11,14 @@ import Quiz2 from './pages/Quiz2'
 import Quiz3 from './pages/Quiz3'
 import Quiz4 from './pages/Quiz4'
 import Quiz5 from './pages/Quiz5'
+import QuizResult from './pages/QuizResult'
 import AptiQuiz from './component/aptiQuiz'
-
+import AptiQuizPlay from './pages/AptiQuizPlay'
+import Short_trick from './pages/Short_trick'
+import Mocktest from './pages/Mocktest'
+import ReadTrick from './pages/readTrick'
+import ReadMock from './pages/readMock'
+import MockTquiz from './pages/MockTquiz'
 function Oop() {
 
     const [level, setLevel] = useState("");
@@ -47,10 +53,16 @@ function App() {
         <Route path="/quiz5" element={<Quiz5/>} />
         <Route path="/quizplay" element={<PlayQuiz />} />
         <Route path="/aptitudeQuiz" element={<AptiQuiz/>} />
+        <Route path="/aptitudeQuiz/play" element={<AptiQuizPlay />} />
+        <Route path="/quizplay/result" element={<QuizResult />} />
+        <Route path="/shortTrick" element={<Short_trick/>}/>
+        <Route path="/read" element={<ReadTrick/>}/>
+        <Route path="/mockread" element={<ReadMock/>}/>
+         <Route path='/mockt' element={<MockTquiz/>}/>
 
 
-
-        {/* <Route path="*" element={<Navigate to="/" replace /> */}
+        
+      {/* <Route path="*" element={<Navigate to="/" replace /> */}
       {/* } /> */}
 
       </Routes>

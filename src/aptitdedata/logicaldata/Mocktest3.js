@@ -140,3 +140,5 @@ export const mocktest3=[
       "answer": "Learning → Practice → Skill → Mastery"
     }
   ]
+
+  export default mocktest3

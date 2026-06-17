@@ -312,3 +312,4 @@ export const quantComprehensiveMockTest2 = {
     }
   ]
 };
+export default quantComprehensiveMockTest2

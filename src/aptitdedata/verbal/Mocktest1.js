@@ -282,3 +282,4 @@ export const mockTest1={
     }
   ]
 }
+export default mockTest1

@@ -1,41 +1,26 @@
-﻿import React, { useContext, useEffect, useMemo, useState } from 'react';
+﻿import React, { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Context from '../context/context';
-import data from '../quiz';
 
-function PlayQuiz() {
-  const { id, level } = useContext(Context);
+function AptiQuizPlay() {
   const location = useLocation();
   const navigate = useNavigate();
-  const routeState = location.state || {};
-  const {
-    quizTitle: routeQuizTitle,
-    questions: routeQuestions = [],
-    timerSeconds: routeTimerSeconds,
-  } = routeState;
+  const state = location.state || {};
+  const { quizTitle: routeQuizTitle, questions: routeQuestions = [], timerSeconds: routeTimerSeconds } = state;
 
-  const [currentQue, setCurrentQue] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
   const [userAnswers, setUserAnswers] = useState([]);
   const [timeLeft, setTimeLeft] = useState(null);
   const [selectedTimerMinutes, setSelectedTimerMinutes] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const selectCategory = data.categories.find((item) => item.level === level);
-  const selectedCard = selectCategory?.cards?.find((c) => c.cardId == id);
-
-  const defaultTimer = useMemo(
-    () => Math.max((routeQuestions.length || selectedCard?.questions?.length || 5) * 60, 300),
-    [routeQuestions.length, selectedCard?.questions?.length]
-  );
-
   const storageKey = useMemo(
-    () => `playQuiz-session-${routeQuizTitle || selectedCard?.title || 'quiz'}`,
-    [routeQuizTitle, selectedCard?.title]
+    () => `aptiQuiz-session-${routeQuizTitle || 'aptitude-quiz'}`,
+    [routeQuizTitle]
   );
 
   const restoredSession = useMemo(() => {
-    if (location.state) return null;
+    if (location.state?.questions?.length) return null;
     const saved = sessionStorage.getItem(storageKey);
     if (!saved) return null;
     try {
@@ -57,50 +42,49 @@ function PlayQuiz() {
     setTimeLeft(minutes * 60);
   };
 
-  const quizQuestions = useMemo(() => {
+  const questions = useMemo(() => {
     if (routeQuestions.length > 0) return routeQuestions;
     if (restoredSession?.questions?.length > 0) return restoredSession.questions;
-    return selectedCard?.questions ?? [];
-  }, [routeQuestions, restoredSession, selectedCard]);
+    return [];
+  }, [routeQuestions, restoredSession]);
 
-  const quizTitle = routeQuizTitle || restoredSession?.quizTitle || selectedCard?.title || 'Quiz';
+  const quizTitle = routeQuizTitle || restoredSession?.quizTitle || 'Aptitude Quiz';
+  const defaultTimer = useMemo(() => Math.max(questions.length * 60, 300), [questions.length]);
 
   useEffect(() => {
     if (restoredSession) {
-      setCurrentQue(restoredSession.currentQue ?? 0);
+      setCurrentIndex(restoredSession.currentIndex ?? 0);
       setSelectedOption(restoredSession.selectedOption || '');
       setUserAnswers(restoredSession.userAnswers || []);
       setTimeLeft(restoredSession.timeLeft ?? routeTimerSeconds ?? defaultTimer);
       setSelectedTimerMinutes(restoredSession.selectedTimerMinutes ?? null);
       return;
     }
-
-    if (!quizQuestions.length || timeLeft !== null) return;
+    if (!questions.length || timeLeft !== null) return;
     setTimeLeft(routeTimerSeconds ?? defaultTimer);
-  }, [restoredSession, routeTimerSeconds, defaultTimer, quizQuestions.length, timeLeft]);
+  }, [restoredSession, routeTimerSeconds, defaultTimer, questions.length, timeLeft]);
 
   useEffect(() => {
-    if (!quizQuestions.length || submitted) return;
+    if (!questions.length || submitted) return;
     const snapshot = {
       quizTitle,
-      questions: quizQuestions,
-      currentQue,
+      questions,
+      currentIndex,
       selectedOption,
       userAnswers,
       timeLeft,
       selectedTimerMinutes,
     };
     sessionStorage.setItem(storageKey, JSON.stringify(snapshot));
-  }, [quizQuestions, currentQue, selectedOption, userAnswers, timeLeft, submitted, quizTitle, storageKey]);
+  }, [questions, currentIndex, selectedOption, userAnswers, timeLeft, submitted, quizTitle, storageKey, selectedTimerMinutes]);
 
   const buildResult = (answers) => {
-    const total = quizQuestions.length;
+    const total = questions.length;
     const attempted = answers.filter((item) => item.selected !== 'No Answer').length;
     const correct = answers.filter((item) => item.selected !== 'No Answer' && item.selected === item.correct).length;
     const wrong = answers.filter((item) => item.selected !== 'No Answer' && item.selected !== item.correct).length;
     const unattempted = total - attempted;
     const score = correct;
-
     return {
       quizTitle,
       total,
@@ -110,7 +94,7 @@ function PlayQuiz() {
       wrong,
       score,
       answers,
-      returnPath: '/quizplay',
+      returnPath: '/aptitudeQuiz',
     };
   };
 
@@ -121,18 +105,18 @@ function PlayQuiz() {
     navigate('/quizplay/result', { state: resultPayload });
   };
 
-  const submitQuiz = (isAutoSubmit = false) => {
-    if (submitted || !quizQuestions.length) return;
+  const submitQuiz = () => {
+    if (submitted || !questions.length) return;
 
     const currentAnswer = {
-      question: quizQuestions[currentQue]?.question || `Question ${currentQue + 1}`,
+      question: questions[currentIndex]?.question || `Question ${currentIndex + 1}`,
       selected: selectedOption || 'No Answer',
-      correct: quizQuestions[currentQue]?.answer || 'No Answer',
-      isCorrect: selectedOption !== '' && selectedOption === quizQuestions[currentQue]?.answer,
+      correct: questions[currentIndex]?.answer || 'No Answer',
+      isCorrect: selectedOption !== '' && selectedOption === questions[currentIndex]?.answer,
     };
 
     const answered = [...userAnswers, currentAnswer];
-    const finalAnswers = quizQuestions.map((question, index) => {
+    const finalAnswers = questions.map((question, index) => {
       if (index < answered.length) {
         return answered[index];
       }
@@ -145,72 +129,69 @@ function PlayQuiz() {
     });
 
     const resultPayload = buildResult(finalAnswers);
-
     navigateToResult(resultPayload);
   };
 
   useEffect(() => {
-    if (submitted || timeLeft === null || timeLeft <= 0 || !quizQuestions.length) return undefined;
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => Math.max(prev - 1, 0));
-    }, 1000);
+    if (submitted || timeLeft === null || timeLeft <= 0 || !questions.length) return undefined;
+    const timer = setInterval(() => setTimeLeft((prev) => Math.max(prev - 1, 0)), 1000);
     return () => clearInterval(timer);
-  }, [timeLeft, submitted, quizQuestions.length]);
+  }, [timeLeft, submitted, questions.length]);
 
   useEffect(() => {
-    if (submitted || timeLeft === null || timeLeft > 0 || !quizQuestions.length) return;
-    submitQuiz(true);
-  }, [timeLeft, submitted, quizQuestions.length]);
+    if (submitted || timeLeft === null || timeLeft > 0 || !questions.length) return;
+    submitQuiz();
+  }, [timeLeft, submitted, questions.length]);
 
   const handleSubmit = () => {
-    if (!quizQuestions.length) return;
+    if (!questions.length) return;
 
     const currentAnswer = {
-      question: quizQuestions[currentQue]?.question || `Question ${currentQue + 1}`,
+      question: questions[currentIndex]?.question || `Question ${currentIndex + 1}`,
       selected: selectedOption || 'No Answer',
-      correct: quizQuestions[currentQue]?.answer || 'No Answer',
-      isCorrect: selectedOption === quizQuestions[currentQue]?.answer,
+      correct: questions[currentIndex]?.answer || 'No Answer',
+      isCorrect: selectedOption === questions[currentIndex]?.answer,
     };
 
-    const updatedAnswers = [...userAnswers, currentAnswer];
-    setUserAnswers(updatedAnswers);
+    const nextAnswers = [...userAnswers, currentAnswer];
+    setUserAnswers(nextAnswers);
     setSelectedOption('');
 
-    if (currentQue + 1 === quizQuestions.length) {
+    if (currentIndex + 1 === questions.length) {
       submitQuiz();
       return;
     }
 
-    setCurrentQue((prev) => prev + 1);
+    setCurrentIndex((prev) => prev + 1);
   };
 
-  if (!quizQuestions.length) {
+  if (!questions.length) {
     return (
       <div className="min-h-screen bg-slate-950 text-white p-6 flex items-center justify-center">
         <div className="max-w-xl rounded-3xl bg-slate-900 border border-slate-700 p-8 text-center">
-          <h1 className="text-3xl font-bold mb-4">No quiz selected</h1>
-          <p className="text-slate-400 mb-6">Please choose a quiz card first.</p>
+          <h1 className="text-3xl font-bold mb-4">No Quiz Loaded</h1>
+          <p className="text-slate-400 mb-6">Please choose a quiz card first. Then start the quiz from the aptitude launcher.</p>
           <button
-            className="bg-cyan-500 text-slate-950 px-5 py-3 rounded-2xl font-semibold hover:bg-cyan-400 transition"
-            onClick={() => navigate('/Quiz')}
+            onClick={() => navigate('/aptitudeQuiz')}
+            className="bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-5 py-3 rounded-xl font-semibold transition"
           >
-            Choose Quiz
+            Go Back
           </button>
         </div>
       </div>
     );
   }
 
-  const currentQuestion = quizQuestions[currentQue];
-  const displayTitle = quizTitle || selectedCard?.title || 'Quiz';
+  const currentQuestion = questions[currentIndex];
+  const percentage = questions.length ? Math.round((buildResult(userAnswers).correct / questions.length) * 100) : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 flex items-center justify-center px-4 py-8">
-      <div className="w-full max-w-3xl rounded-3xl bg-slate-900 border border-slate-700 p-8 shadow-2xl">
+    <div className="min-h-screen bg-slate-950 p-6 flex items-center justify-center">
+      <div className="w-full max-w-3xl rounded-3xl bg-slate-900 border border-slate-700 p-8 shadow-xl">
         <div className="flex flex-col gap-4 mb-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-cyan-300">{displayTitle}</h1>
-            <p className="text-slate-400">Question {currentQue + 1} of {quizQuestions.length}</p>
+            <h1 className="text-3xl font-bold text-cyan-300">{quizTitle}</h1>
+            <p className="text-slate-400">Question {currentIndex + 1} of {questions.length}</p>
             <div className="mt-3 flex flex-wrap items-center gap-3">
               <label className="text-slate-400 text-sm">Select Time</label>
               <select
@@ -234,22 +215,22 @@ function PlayQuiz() {
         </div>
 
         <div className="rounded-3xl bg-slate-800 border border-slate-700 p-6 mb-6">
-          <p className="text-lg font-semibold text-white mb-4">{currentQuestion.question}</p>
+          <p className="text-xl font-semibold text-white mb-4">{currentQuestion.question}</p>
           <div className="space-y-3">
-            {currentQuestion.options.map((op, idx) => (
+            {currentQuestion.options?.map((option, index) => (
               <label
-                key={idx}
-                className={`flex cursor-pointer items-center gap-3 rounded-2xl border px-4 py-4 transition ${selectedOption === op ? 'border-cyan-500 bg-cyan-600 text-white' : 'border-slate-700 bg-slate-900 text-slate-200 hover:border-slate-500 hover:bg-slate-800'}`}
+                key={index}
+                className={`flex cursor-pointer items-center gap-3 rounded-2xl border px-4 py-4 transition ${selectedOption === option ? 'border-cyan-500 bg-cyan-600 text-white' : 'border-slate-700 bg-slate-900 text-slate-200 hover:border-slate-500 hover:bg-slate-800'}`}
               >
                 <input
                   type="radio"
                   name="option"
-                  value={op}
-                  checked={selectedOption === op}
-                  onChange={() => setSelectedOption(op)}
+                  value={option}
+                  checked={selectedOption === option}
+                  onChange={() => setSelectedOption(option)}
                   className="h-4 w-4 accent-cyan-500"
                 />
-                <span>{op}</span>
+                <span>{option}</span>
               </label>
             ))}
           </div>
@@ -259,11 +240,11 @@ function PlayQuiz() {
           onClick={handleSubmit}
           className="w-full rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-4 text-lg font-semibold text-slate-950 hover:brightness-110 transition"
         >
-          {currentQue + 1 === quizQuestions.length ? 'Submit Quiz' : 'Submit Answer'}
+          {currentIndex + 1 === questions.length ? 'Submit Quiz' : 'Submit Answer'}
         </button>
       </div>
     </div>
   );
 }
 
-export default PlayQuiz;
+export default AptiQuizPlay;
